@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskListPage">
+
+    <fragment
+        android:id="@+id/taskDetailPage"
+        android:name="com.aliihsan.todolistapp.ui.fragments.TaskDetailPage"
+        android:label="fragment_task_detail_page"
+        tools:layout="@layout/fragment_task_detail_page" />
+    <fragment
+        android:id="@+id/addTaskPage"
+        android:name="com.aliihsan.todolistapp.ui.fragments.AddTaskPage"
+        android:label="fragment_add_task_page"
+        tools:layout="@layout/fragment_add_task_page" />
+    <fragment
+        android:id="@+id/taskListPage"
+        android:name="com.aliihsan.todolistapp.ui.fragments.TaskListPage"
+        android:label="fragment_task_list_page"
+        tools:layout="@layout/fragment_task_list_page" >
+        <action
+            android:id="@+id/action_taskListPage_to_taskDetailPage"
+            app:destination="@id/taskDetailPage" />
+        <action
+            android:id="@+id/action_taskListPage_to_addTaskPage"
+            app:destination="@id/addTaskPage" />
+    </fragment>
+</navigation>

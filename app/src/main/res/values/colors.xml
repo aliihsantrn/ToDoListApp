@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- To Do List Colors -->
+    <color name="primary">#4D5BBD</color>
+    <color name="priority_new">#0AA78F</color>
+    <color name="tittle_color">#212433</color>
+    <color name="description_color">#707070</color>
+    <color name="box_color">#F5F5F5</color>
+</resources>
