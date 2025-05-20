@@ -9,12 +9,11 @@
         android:id="@+id/taskDetailPage"
         android:name="com.aliihsan.todolistapp.ui.fragments.TaskDetailPage"
         android:label="fragment_task_detail_page"
-        tools:layout="@layout/fragment_task_detail_page" />
-    <fragment
-        android:id="@+id/addTaskPage"
-        android:name="com.aliihsan.todolistapp.ui.fragments.AddTaskPage"
-        android:label="fragment_add_task_page"
-        tools:layout="@layout/fragment_add_task_page" />
+        tools:layout="@layout/fragment_task_detail_page" >
+        <argument
+            android:name="task"
+            app:argType="com.aliihsan.todolistapp.data.entity.TaskModel" />
+    </fragment>
     <fragment
         android:id="@+id/taskListPage"
         android:name="com.aliihsan.todolistapp.ui.fragments.TaskListPage"
@@ -24,7 +23,11 @@
             android:id="@+id/action_taskListPage_to_taskDetailPage"
             app:destination="@id/taskDetailPage" />
         <action
-            android:id="@+id/action_taskListPage_to_addTaskPage"
-            app:destination="@id/addTaskPage" />
+            android:id="@+id/action_taskListPage_to_addTaskBottomSheetFragment"
+            app:destination="@id/addTaskBottomSheetFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/addTaskBottomSheetFragment"
+        android:name="com.aliihsan.todolistapp.ui.fragments.AddTaskBottomSheetFragment"
+        android:label="AddTaskBottomSheetFragment" />
 </navigation>
